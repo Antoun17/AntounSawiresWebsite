@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :posts
+  resources :posts, :index
 
   root 'posts#index'
-  home '@posts'
+  
 end

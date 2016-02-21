@@ -35,14 +35,14 @@ a {
 	left: 0;
 	top: 0;
 	height: 100%;
-	background: #262626;
+	background: #1a1a1a;
 	padding: 3em 0 1em 3em;
 	border-right: 1px solid #d6dce0;
 	#logo {
 		
 	}
 	ul {
-		list-style: none;
+		list-style-type: none;
 		text-align: right;
 		padding-right: 3em;
 		.category {
@@ -52,6 +52,7 @@ a {
 			color: #33acb7;
 		}
 		li {
+			list-style: none;
 			padding: .5em 0;
 			a {
 				color: #9eafba;

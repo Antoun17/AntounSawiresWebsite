@@ -5,6 +5,8 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
+
 </head>
 <body>
  	<div id="sidebar">
@@ -13,29 +15,49 @@
  			<%= image_tag "Square.png" %>
  		<% end %>
 
+	 
 
+ 		<div id="btn">
 
- 		<ul>
- 			<li class="catagory"></li>
- 			<li><a href="https://www.youtube.com/channel/UC4idXvzcHD9t_wddzAEOKxQ">Youtube</a></li>
- 			<li><a href="https://twitter.com/AntounS17">Twitter</a></li>
- 			<li><a href="https://www.facebook.com/antounsawires1/?ref=hl">Facebook</a></li>
- 		</ul>	
+ 			<button onclick="window.location='https://www.youtube.com/channel/UC4idXvzcHD9t_wddzAEOKxQ';">Youtube</button>
+ 			<button onclick="window.location='https://www.facebook.com/antounsawires1/ref=hl';">Facebook</button>
 
+ 			<button onclick="window.location='https://twitter.com/AntounS17';">Twitter</button>
 
- 		</div>
-
-
- 		<ul>
+		<ul>
  			<li class="catagory"></li>
  			<li><%= link_to "Home", root_path %> </li>
  			<li>About Me</li>
  		</ul>
 
+
+		</div>
+			
 	
+ 	</div>
+					
+	
+		<div id="main_content">
+			<div id="header">
+				<p>All Posts</p>
+
+				<div class="buttons"></div>
+				<button class="button"><%= link_to "New Post", new_post_path%></button></br>
+				<button class="button">Log Out</button>
+		</div>
+	</div>
+
+		<% flash.each do |name, msg| %>
+			<%= content_tag(:div, msg, class: "alert") %>
+			<% end %>
+
+		<%= yield %>
+		
+ 		<p class="sign_in">Admin Login</p>
+
+		
  	</div
 
-<%= yield %>
 
 </body>
 </html>

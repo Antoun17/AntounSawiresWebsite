@@ -14,49 +14,48 @@
  			<%= link_to root_path do %>
  			<%= image_tag "Square.png" %>
  		<% end %>
-
-	 
-
- 		<div id="btn">
-
- 			<button onclick="window.location='https://www.youtube.com/channel/UC4idXvzcHD9t_wddzAEOKxQ';">Youtube</button>
- 			<button onclick="window.location='https://www.facebook.com/antounsawires1/ref=hl';">Facebook</button>
-
- 			<button onclick="window.location='https://twitter.com/AntounS17';">Twitter</button>
-
+			</div>
 		<ul>
- 			<li class="catagory"></li>
- 			<li><%= link_to "Home", root_path %> </li>
- 			<li>About Me</li>
- 		</ul>
+			<li><a href="https://www.youtube.com/channel/UC4idXvzcHD9t_wddzAEOKxQ"><img src="/assets/Youtube.png" alt="Youtube" style="width:50px;height:50px;border:0;"></a></li>
+			<li><a href="https://twitter.com/AntounS17"><img src="/assets/twitter.png" alt="Twitter" style="width:55px;height:55px;border:0;"></a></li>
+			<li><a href="https://www.facebook.com/antounsawires1"><img src="/assets/facebook.png" alt="Facebook" style="width:50px;height:50px;border:0;"></a></li>
+		</ul>
 
-
-		</div>
-			
-	
+			<p class="sign_in">Admin Login</p>
  	</div>
-					
-	
-		<div id="main_content">
-			<div id="header">
-				<p>All Posts</p>
 
-				<div class="buttons"></div>
-				<button class="button"><%= link_to "New Post", new_post_path%></button></br>
-				<button class="button">Log Out</button>
+
+		<div id="header">	
+			<p>All Posts</p>
+			<div class="buttons">
+			<button class="button"><%= link_to "New Post", new_post_path %> </button> 
+			<button class="button">Log Out</button>
 		</div>
 	</div>
-
-		<% flash.each do |name, msg| %>
+		 <div id="main_content">
+			
+			<% flash.each do |name, msg| %>
 			<%= content_tag(:div, msg, class: "alert") %>
 			<% end %>
 
-		<%= yield %>
+			<% yield %>
+
+		</div>
+		 	
+
+			
 		
- 		<p class="sign_in">Admin Login</p>
+
+
+
+
+
+
+
+
+
 
 		
- 	</div
 
 
 </body>

@@ -30,7 +30,7 @@ a {
 }
 
 #sidebar {
-	width: 250px;
+	width: 350px;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -39,15 +39,65 @@ a {
 	padding: 3em 0 1em 3em;
 	border-right: 1px solid #d6dce0;
 }
-#header {
 
-	margin-left: 1500px;
-	margin-bottom: 500px;
+#logo {
+
+	padding-left: 52px;
+	padding-bottom: 20px;
+	border-color: white;
+
 }
+
+
+#header {
+	padding-left: 450px;
+}
+
 
 #main_content {
-	top: 400px;
-	height: 500px;
+	margin-left: 2250px;
+}
+
+ul {
+
+color: white;
+list-style-type: none;
+display: inline;
+}
+
+li{
+
+display:  inline;
+}
+#second {
+	color: black;
+	padding-bottom: 125px; 	
 
 }
-	
+
+
+a {
+
+padding-right: 25px;
+
+}
+button {
+
+  background-color: #0C52BA; /* Green */
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 22px;
+    text-align: center;
+    padding-bottom: 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+
+p.sign_in{
+
+	padding-top: 600px;
+	color:  white;
+}
